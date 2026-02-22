@@ -1,119 +1,107 @@
-#meanwhile-virginia {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px
-}
-
+/* General Styles */
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding: 20px;
   color: #6699ff;
-  margin: 0; 
-}
+  margin: 0}
 
+/* Top Banner / Navigation */
 .top-banner {
   padding: 20px;
   position: sticky;
   background: white;
   top: 0;
-  z-index: 1000;
-}
+  z-index: 1000}
 
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-}
+  justify-content: space-between}
+
+#meanwhile-virginia {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px}
 
 .nav-links {
   list-style: none; 
   display: flex; 
+  gap: 15px;
   justify-content: center; 
   margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin: 10px; 
-}
+  padding: 0}
 
 .nav-links a {
   text-decoration: none;
   color: #6699ff;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  transition: color 0.3s;
-}
+  transition: color 0.3s}
 
 .nav-links a:hover {
-  color: #ffcc00; 
-}
+  color: #ffcc00}
 
-.post-preview h1 a {
-  text-decoration: none;
-  color: #6699ff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  transition: color 0.3s;
-}
-
-.post-preview h1:hover {
-  color: #ffcc00; 
-}
-
+/* Hero Header */
 .hero-header {
-  height: 600px; /* adjust height */
+  height: 600px; 
   background-image: url("images/grad-photo1.jpg");
-  background-size: cover;      /* fills the area */
-  background-position: center; /* centers image */
+  background-size: cover; 
+  background-position: center; 
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical centering */
-  align-items: center;     /* horizontal centering */
+  justify-content: center; 
+  align-items: center;  
 
   color: white;
   text-align: center;
-  padding: 20px;
-}
+  padding: 20px}
 
-.blog-post {
+.blog-list {
   max-width: 700px;
-  margin: 100px auto 50px auto;
+  margin: 50px auto;
   padding: 0 20px;
-  line-height: 1.6;
 }
 
-.blog-post h1 {
+.post-preview {
+  background-color: #DBDFFF;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-preview h2 {
+  color: #6699ff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s;
   margin-bottom: 10px;
 }
 
 .date {
   color: gray;
   font-size: 0.9rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
-/* Gallery container */
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;           /* space between photos */
-  margin: 20px 0;
-}
-
-/* Images inside the gallery */
-.photo-gallery img {
-  width: 100%;
-  height: auto;
+.blog-image.left {
+  float: left; 
+  max-width: 20%;
+  height: auto; 
   display: block;
-  border-radius: 8px;  /* optional rounded corners */
-  object-fit: cover;    /* makes the crop consistent */
-  transition: transform 0.3s;
+  margin: 15px auto;
+  border-radius: 12px;
 }
 
-/* Optional: zoom effect on hover */
-.photo-gallery img:hover {
-  transform: scale(1.05);
+.post-preview::after {
+  content: "";
+  display: table;
+  clear: both;
 }
-

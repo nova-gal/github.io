@@ -46,7 +46,18 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ffcc00; /* highlight on hover */
+  color: #ffcc00; 
+}
+
+.post-preview h1 a {
+  text-decoration: none;
+  color: #6699ff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: color 0.3s;
+}
+
+.post-preview h1:hover {
+  color: #ffcc00; 
 }
 
 .hero-header {
@@ -65,3 +76,44 @@ body {
   text-align: center;
   padding: 20px;
 }
+
+.blog-post {
+  max-width: 700px;
+  margin: 100px auto 50px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.blog-post h1 {
+  margin-bottom: 10px;
+}
+
+.date {
+  color: gray;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+/* Gallery container */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;           /* space between photos */
+  margin: 20px 0;
+}
+
+/* Images inside the gallery */
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;  /* optional rounded corners */
+  object-fit: cover;    /* makes the crop consistent */
+  transition: transform 0.3s;
+}
+
+/* Optional: zoom effect on hover */
+.photo-gallery img:hover {
+  transform: scale(1.05);
+}
+
